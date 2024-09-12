@@ -1,0 +1,19 @@
+%{
+%}
+
+%%
+
+[a-z A-Z][a-z A-Z 0-9]* {printf("\n it is identifier\n");}
+
+.+ {printf("\n it is not identifier\n");}
+
+%%
+int yywrap(void) {}
+
+int main()
+{
+  printf("\nidentifier: ");
+  yylex();
+  printf("\n");
+  return 0;
+} 
